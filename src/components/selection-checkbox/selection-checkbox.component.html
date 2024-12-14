@@ -1,0 +1,12 @@
+<label>
+  <input
+    type="checkbox"
+    [id]="value"
+    [name]="name"
+    [value]="value"
+    [ngModel]="isChecked"
+    (ngModelChange)="onChange($event)"
+    [disabled]="isDisabled"
+    (blur)="onTouched()"
+  /><span>{{ label }}</span>
+</label>

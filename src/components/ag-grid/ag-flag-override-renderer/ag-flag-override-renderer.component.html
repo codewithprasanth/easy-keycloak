@@ -1,0 +1,25 @@
+@if(showButtons){
+<div class="action-wrapper">
+  <div class="icon-wrapper" (click)="push(false)">
+    <img
+      src="assets\icons\pushasis.svg"
+      alt="Execute"
+      height="16px"
+      ngbTooltip="Click this button if you want the consignment to be pushed to DW with EUDR Status as Attribute Unknown. The action can not be revoked."
+      placement="top"
+      container="body"
+    />
+  </div>
+
+  <div class="icon-wrapper" (click)="push(true)">
+    <img
+      src="assets\icons\compliant&push.svg"
+      alt="Execute"
+      height="16px"
+      ngbTooltip="Click this button to overwrite the EUDR Status of this consignment & change it to Compliant"
+      placement="top"
+      container="body"
+    />
+  </div>
+</div>
+}@else {<span style="margin-left: 40px">-</span>}

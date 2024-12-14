@@ -1,0 +1,53 @@
+.action-btn {
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  padding: 0px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.action-btn.primary {
+  background: #860063;
+  color: white;
+}
+
+.action-btn.secondary {
+  border: 1px solid #860063;
+  color: #860063;
+  background: white;
+}
+
+.action-btn.tertiary {
+  background: #c6c6c5;
+  color: white;
+}
+
+.action-btn.approve {
+  background: #6dba00;
+  color: white;
+}
+
+.action-btn.reject {
+  border: 1px solid #d83548;
+  color: #d83548;
+  background: white;
+}
+
+.action-btn.refresh {
+  background: #860063;
+  color: white;
+}
+
+.button-icon {
+  height: 16px;
+  margin-right: 8px;
+}
+
+.action-btn:disabled {
+  background: #c6c6c5 !important;
+  color: white !important;
+  cursor: not-allowed !important;
+}

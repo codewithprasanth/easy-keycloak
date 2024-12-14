@@ -1,0 +1,13 @@
+<svg id="Solid_Button_Big" data-name="Solid Button Big" xmlns="http://www.w3.org/2000/svg" width="36.04" height="34.479" viewBox="0 0 36.04 34.479">
+  <g id="Rectangle_7374" data-name="Rectangle 7374" fill="#fff" stroke="#c6c6c5" stroke-width="1">
+    <rect width="35.918" height="34.324" rx="6" stroke="none"/>
+    <rect x="0.5" y="0.5" width="34.918" height="33.324" rx="5.5" fill="none"/>
+  </g>
+  <g id="Group_29337" data-name="Group 29337" transform="translate(12 9)">
+    <g id="rubbish-bin-delete-button">
+      <g id="delete">
+        <path id="Path_1697" data-name="Path 1697" d="M51.86,13.759a1.725,1.725,0,0,0,1.72,1.72h6.88a1.725,1.725,0,0,0,1.72-1.72V3.44H51.86ZM63.04.86H60.03L59.17,0h-4.3l-.86.86H51V2.58H63.04Z" transform="translate(-51)" fill="#4a4949"/>
+      </g>
+    </g>
+  </g>
+</svg>

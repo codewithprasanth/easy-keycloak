@@ -1,0 +1,12 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_14293" data-name="Group 14293" transform="translate(0 0)">
+    <g id="Group_13871" data-name="Group 13871" transform="translate(0 0)">
+      <g id="Rectangle_7740" data-name="Rectangle 7740" fill="#6dba00" stroke="#6dba00" stroke-width="1">
+        <rect width="20" height="20" rx="10" stroke="none"/>
+        <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" fill="none"/>
+      </g>
+    </g>
+    <path id="flag-solid" d="M1.258.629A.629.629,0,0,0,0,.629V9.436a.629.629,0,1,0,1.258,0V6.92L2.522,6.6a3.5,3.5,0,0,1,2.408.263,3.482,3.482,0,0,0,2.786.145L8.4,6.757a.63.63,0,0,0,.409-.59V1.3A.609.609,0,0,0,7.926.755L7.738.849a3.227,3.227,0,0,1-2.892,0A3.234,3.234,0,0,0,2.615.6L1.258.944Z" transform="translate(5.929 4.967)" fill="#fff"/>
+  </g>
+</svg>

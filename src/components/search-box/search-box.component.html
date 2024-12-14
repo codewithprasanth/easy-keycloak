@@ -1,0 +1,26 @@
+<div class="search-box">
+  <input
+    [type]="inputType"
+    class="global-search"
+    [class.vendor-search]="isVendorSearch"
+    #input
+    (keyup.enter)="search(input.value)"
+    (input)="onType(input.value)"
+    (focus)="onType(input.value)"
+    [ngModel]="searchValue"
+    [placeholder]="placeholder"
+    [maxlength]="inputMaxLength"
+  />
+  <span class="prefix-zeros" *ngIf="isVendorSearch">000</span>
+  <img
+    [src]="getImgSrc()"
+    class="search-icon"
+    [class.disabled]="!enableSearch"
+    alt="search"
+    (click)="search(input.value)"
+  />
+
+  <div class="message-bubble" *ngIf="!enableSearch && input.value.length > 0">
+    Enter {{ min_max }} {{ inputLength }} characters
+  </div>
+</div>

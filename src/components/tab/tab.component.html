@@ -1,0 +1,9 @@
+<div class="tab-wrapper">
+  <button
+    *ngFor="let opt of finalOptions"
+    (click)="onclick(opt.id)"
+    [ngClass]="{ active: selectedId === opt.id }"
+  >
+    {{ opt.name }}
+  </button>
+</div>

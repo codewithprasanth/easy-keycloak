@@ -1,0 +1,11 @@
+<div>
+  {{ headerName }}
+  <img
+    *ngIf="showInfoIcon"
+    src="assets/icons/info.svg"
+    alt="info"
+    [ngbTooltip]="tooltip"
+    placement="top"
+    container="body"
+  />
+</div>

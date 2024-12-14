@@ -1,0 +1,47 @@
+<div class="action-wrapper">
+  @if(data.status.includes('Pending')){
+  <div class="icon-wrapper" (click)="onExecute()">
+    <img
+      src="assets\icons\execute-icon.svg"
+      alt="Execute"
+      height="16px"
+      ngbTooltip="Execute"
+      placement="top"
+      container="body"
+    />
+  </div>
+  } @if(data.deleteFlag){
+  <div class="icon-wrapper" (click)="onDelete()">
+    <img
+      src="assets\icons\delete-icon.svg"
+      alt="Delete"
+      height="12px"
+      ngbTooltip="Delete"
+      placement="top"
+      container="body"
+    />
+  </div>
+  } @if(data.status !== 'Failed' && !data.status.includes('Pending')){
+  <div class="icon-wrapper" (click)="onViewDetails()">
+    <img
+      src="assets\icons\eye-icon.svg"
+      alt="View"
+      height="18px"
+      ngbTooltip="View Details"
+      placement="top"
+      container="body"
+    />
+  </div>
+  } @if(data.status === 'Failed'){
+  <div class="icon-wrapper" (click)="onViewError()">
+    <img
+      src="assets\icons\alert-message.svg"
+      alt="Error"
+      height="18px"
+      ngbTooltip="Show Error"
+      placement="top"
+      container="body"
+    />
+  </div>
+  }
+</div>

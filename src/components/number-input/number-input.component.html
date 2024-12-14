@@ -1,0 +1,21 @@
+@if(!withoutDecimal){
+<input
+  type="textbox"
+  number
+  [value]="value"
+  (keyup)="onChanges($event)"
+  (focus)="onTouched()"
+  [disabled]="disabled"
+  [placeholder]="placeholder"
+/>
+} @if(withoutDecimal){
+<input
+  type="textbox"
+  [value]="value"
+  [disabled]="disabled"
+  [placeholder]="placeholder"
+  (focus)="onTouched()"
+  (keypress)="($event.charCode >= 48 && $event.charCode < 58)"
+  (keyup)="onChanges($event)"
+/>
+}

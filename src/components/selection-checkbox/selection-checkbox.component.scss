@@ -1,0 +1,29 @@
+label {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+label span {
+  text-align: center;
+  display: block;
+  border: 1px solid #c6c6c5;
+  color: #000;
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+input:checked + span {
+  background-color: #4a4949;
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border: 1px solid #c6c6c5;
+  color: #fff;
+}

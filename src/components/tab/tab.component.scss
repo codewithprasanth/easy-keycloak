@@ -1,0 +1,24 @@
+button {
+  border: none;
+  padding: 8px 16px;
+  min-width: 100px;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  color: #222;
+}
+
+.tab-wrapper button:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.tab-wrapper button:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+button.active {
+  background-color: #860063;
+  font-weight: 600;
+  color: #fff;
+}

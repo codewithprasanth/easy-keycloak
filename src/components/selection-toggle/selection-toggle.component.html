@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div
+    class="toggle-1"
+    [ngClass]="{ active: selected === option1 }"
+    (click)="select(option1)"
+  >
+    {{ option1 }}
+  </div>
+  <div
+    class="toggle-2"
+    [ngClass]="{ active: selected === option2 }"
+    (click)="select(option2)"
+  >
+    {{ option2 }}
+  </div>
+</div>

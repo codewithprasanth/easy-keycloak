@@ -1,0 +1,76 @@
+::ng-deep .modal-content {
+  border-radius: 12px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+::ng-deep .modal-dialog {
+  max-width: 470px;
+}
+
+::ng-deep .modal-header {
+  display: flex;
+  justify-content: space-between;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.header-icon {
+  height: 24px;
+  margin-right: 8px;
+}
+
+::ng-deep .modal-title {
+  font-size: 20px;
+  color: #222222;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.close {
+  height: 24px;
+  cursor: pointer;
+}
+
+::ng-deep .modal-body {
+  border: none !important;
+  padding: 15px 0 0 0;
+  color: #222222;
+  font-size: 16px;
+}
+
+.msg-array {
+  margin-top: 12px;
+}
+
+::ng-deep .modal-footer {
+  font-size: 10px;
+  border: none !important;
+  padding-bottom: 0px;
+}
+
+.action-btn {
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  padding: 0px 30px;
+  min-width: 80px;
+}
+
+.action-btn.primary {
+  background: #860063;
+  color: white;
+}
+
+.action-btn.secondary {
+  border: 1px solid #860063 !important;
+  color: #860063;
+  background: white;
+  outline: none !important;
+}
+
+.target {
+  margin-top: 20px;
+  color: #860063;
+}

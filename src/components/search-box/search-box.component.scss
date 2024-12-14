@@ -1,0 +1,91 @@
+.search-box {
+  position: relative;
+  // width: 300px;
+  .prefix-zeros {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #000000;
+  }
+
+  .vendor-search {
+    padding-left: 40px; // Adjust this value based on the width of your prefix
+    width: 100%;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 11px;
+    height: 22px;
+    cursor: pointer;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 11px;
+  height: 21px;
+  cursor: pointer;
+}
+.disabled {
+  cursor: not-allowed;
+}
+
+.global-search {
+  height: 40px;
+  // width: 300px;
+  border-radius: 8px;
+  border: 1px solid #c6c6c5;
+  padding: 7px 14px;
+  color: black;
+  position: relative;
+  outline: none;
+  padding-right: 48px;
+}
+
+.global-search:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #c6c6c5;
+}
+
+.message-bubble {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  width: 280px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: -4px 2px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.message-bubble::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

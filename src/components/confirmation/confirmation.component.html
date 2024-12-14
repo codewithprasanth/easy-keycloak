@@ -1,0 +1,39 @@
+<div class="modal-header">
+  <div class="modal-title">
+    <img
+      src="assets\icons\close-circle.svg"
+      class="header-icon"
+      alt="close"
+      aria-label="Close"
+      (click)="dismiss()"
+    />
+    <span>{{ title }}</span>
+  </div>
+  <img
+    src="assets\icons\close.svg"
+    class="close"
+    alt="close"
+    aria-label="Close"
+    (click)="dismiss()"
+  />
+</div>
+<div class="modal-body">
+  <div>{{ message }}</div>
+  <div class="msg-array">
+    <div *ngFor="let m of getErrorList()">
+      <span style="font-weight: 600">{{ m[0] }}: </span> {{ m[1] }}
+    </div>
+  </div>
+
+  <div *ngIf="!!target" class="target">{{ target }}</div>
+</div>
+<div class="modal-footer" *ngIf="showActions">
+  <gdb-btn
+    type="secondary"
+    [text]="btnCancelText"
+    (click)="decline()"
+    style="margin-right: 8px"
+  />
+
+  <gdb-btn type="primary" [text]="btnOkText" (click)="accept()"></gdb-btn>
+</div>

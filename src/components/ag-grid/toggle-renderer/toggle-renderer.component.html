@@ -1,0 +1,8 @@
+<gdb-toggle
+  *ngIf="!isSameUser"
+  [ngModel]="params.value"
+  [disabled]="isDisabled"
+  (onChange)="onToggleChange($event)"
+></gdb-toggle>
+
+<div class="not-applicable" *ngIf="isSameUser">-</div>

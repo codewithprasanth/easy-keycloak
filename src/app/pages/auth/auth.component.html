@@ -1,0 +1,13 @@
+<div class="configuration">
+  <h2 class="heading">Configuration</h2>
+  <configuration
+    (submitConfig)="submitConfig($event)"
+    (editConfig)="editConfig()"
+  />
+</div>
+@if(showLogin){
+<div class="login">
+  <h2 class="heading">Login</h2>
+  <login (onLogin)="login($event)" />
+</div>
+}

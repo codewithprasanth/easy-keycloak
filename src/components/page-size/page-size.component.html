@@ -1,0 +1,19 @@
+<div>
+  <label for="rows-per-page">Rows per page</label>
+  <ng-select
+    id="rows-per-page"
+    style="width: 64px"
+    bindLabel=""
+    bindValue=""
+    [items]="itemsPerPageOptions"
+    [clearable]="false"
+    [(ngModel)]="pageSize"
+    (ngModelChange)="onPageSizeChange()"
+  >
+  </ng-select>
+  <span style="margin-left: 16px"
+    >{{ (currentPage - 1) * pageSize + 1 }} -
+    {{ getMin(currentPage * pageSize, totalItems) }} of
+    {{ totalItems }}
+  </span>
+</div>

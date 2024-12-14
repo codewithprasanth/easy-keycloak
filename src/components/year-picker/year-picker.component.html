@@ -1,0 +1,36 @@
+<div class="input" ClickOutside (clickedOutside)="displayDropdown = false">
+  <div class="selected-area" (click)="toggle($event)">
+    @for (selected of selectedYears| count:maxShow; track $index) {
+    <div class="selected-chip">{{ selected }}</div>
+    }@empty {
+    <span class="placeholder">{{ placeholder }}</span>
+    }
+  </div>
+  <div
+    class="additional"
+    [ngStyle]="{ opacity: additional > 0 ? '1' : '0' }"
+    (click)="toggle($event)"
+  >
+    +{{ additional }}
+  </div>
+  <img
+    src="/assets/icons/calender-icon.svg"
+    alt="calender"
+    height="22px"
+    style="padding-right: 8px"
+    (click)="toggle($event)"
+  />
+  @if(displayDropdown){
+  <div class="dropdown">
+    @for(year of years;track $index){
+    <div
+      (click)="toggleChip(year)"
+      class="chip"
+      [ngClass]="{ 'active-chip': selectedYears.includes(year) }"
+    >
+      {{ year }}
+    </div>
+    }
+  </div>
+  }
+</div>

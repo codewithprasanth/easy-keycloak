@@ -1,0 +1,15 @@
+<div class="button b2" id="button-13" [ngClass]="{ disable: isDisabled }">
+  <input
+    type="checkbox"
+    class="checkbox"
+    [(ngModel)]="value"
+    (ngModelChange)="change($event)"
+    [disabled]="isDisabled"
+    (change)="onCheckboxChange($event)"
+    (blur)="touched()"
+  />
+  <div class="knobs">
+    <span></span>
+  </div>
+  <div class="layer"></div>
+</div>

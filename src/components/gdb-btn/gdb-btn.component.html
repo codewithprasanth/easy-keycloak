@@ -1,0 +1,4 @@
+<button class="action-btn" [class]="type" [disabled]="isDisabled">
+  <img *ngIf="!!iconUrl" [src]="iconUrl" alt="button" class="button-icon" />
+  {{ text }}
+</button>

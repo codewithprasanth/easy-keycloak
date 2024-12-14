@@ -1,0 +1,46 @@
+.wrapper {
+  // min-height: 100vw;
+}
+
+header {
+  height: 50px;
+  background-color: aqua;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .user-action {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+}
+
+section {
+  width: 100%;
+  display: flex;
+
+  nav {
+    width: 20%;
+    a {
+      text-decoration: none;
+      color: red;
+      padding: 4px 8px;
+      background-color: beige;
+      border: 1px solid lightgray;
+      display: block;
+      &:hover {
+        background-color: aqua;
+        cursor: pointer;
+      }
+      &.active {
+        background-color: rgb(183, 238, 238);
+      }
+    }
+  }
+  main {
+    width: 80%;
+  }
+}

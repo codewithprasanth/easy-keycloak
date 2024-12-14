@@ -1,0 +1,12 @@
+<label class="check-container" [ngClass]="{ disable: isDisabled }"
+  >{{ label }}
+  <input
+    type="checkbox"
+    [name]="name"
+    [value]="value"
+    [checked]="isChecked"
+    (change)="change($event)"
+    [disabled]="isDisabled"
+  />
+  <span class="mark"></span>
+</label>

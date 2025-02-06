@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  baseURL: 'https://geodb-dev-gateway.ofi.com/',
 };
 
 /*

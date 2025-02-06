@@ -1,4 +1,8 @@
-<form [formGroup]="configurationForm" (ngSubmit)="submitConfiguration()">
+<form
+  [formGroup]="configurationForm"
+  (ngSubmit)="submitConfiguration()"
+  autocomplete="on"
+>
   @if(configurationSubmitted){
   <div class="edit-icon">
     <img
@@ -13,11 +17,11 @@
   }
   <div class="form-input">
     <label for="baseUrl">Base Url *(https://example.com/auth)</label>
-    <text-input id="baseUrl" formControlName="baseUrl" />
+    <text-input id="baseUrl" formControlName="baseUrl" autocomplete="on" />
   </div>
   <div class="form-input">
     <label for="realm">Realm *</label>
-    <text-input id="realm" formControlName="realm" />
+    <text-input id="realm" formControlName="realm" autocomplete="on" />
   </div>
   @if(!configurationSubmitted){
   <div class="form-input">

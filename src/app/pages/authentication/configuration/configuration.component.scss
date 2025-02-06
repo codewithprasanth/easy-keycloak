@@ -1,0 +1,13 @@
+.form-input {
+  margin-bottom: 8px;
+  label {
+    width: 100%;
+    display: block;
+  }
+}
+
+.edit-icon {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}

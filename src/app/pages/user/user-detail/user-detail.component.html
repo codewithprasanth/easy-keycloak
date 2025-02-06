@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <div *ngIf="user" class="gdb-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="page-header">User Details</div>
+      <gdb-btn text="Edit User" (click)="onEdit()" type="primary"></gdb-btn>
+    </div>
+    <div class="key-value">
+      <div class="key">Id</div>
+      <div class="value">{{ user.id }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">Username</div>
+      <div class="value">{{ user.username }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">First Name</div>
+      <div class="value">{{ user.firstName || "-" }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">Last Name</div>
+      <div class="value">{{ user.lastName || "-" }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">Email</div>
+      <div class="value">{{ user.email || "-" }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">Email Verified</div>
+      <div class="value">{{ user.emailVerified }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">Enabled</div>
+      <div class="value">{{ user.enabled }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">Created At</div>
+      <div class="value">{{ user.createdTimestamp | date : "short" }}</div>
+    </div>
+    <div class="key-value">
+      <div class="key">Roles Mapped</div>
+      <div class="chip-holder">
+        @for (role of roles; track $index) {
+        <div class="chip">
+          <div class="chip-key">{{ role.name }}</div>
+          <div class="chip-value">{{ role.id }}</div>
+        </div>
+        }@empty {
+        <div class="value">No Roles found</div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

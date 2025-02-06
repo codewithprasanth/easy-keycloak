@@ -2,7 +2,9 @@
   <img
     [src]="imageSrc"
     alt="compliance Status"
-    [ngbTooltip]="params.value ? 'Active' : 'InActive'"
+    [ngbTooltip]="
+      params.value ? params.positiveTooltip : params.negativeTooltip
+    "
     placement="top"
     container="body"
   />

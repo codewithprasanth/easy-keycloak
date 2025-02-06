@@ -3,14 +3,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { UserManagementComponent } from './pages/user/user-management/user-management.component';
 import { TokenGenComponent } from './pages/token-gen/token-gen.component';
-import { AuthComponent } from './pages/auth/auth.component';
+import { AuthComponent } from './pages/authentication/auth/auth.component';
 import { authGuard } from './auth/auth-guard.service';
-import { UserDetailComponent } from './pages/user-detail/user-detail.component';
-import { EditUserComponent } from './pages/edit-user/edit-user.component';
-import { CreateUserComponent } from './pages/create-user/create-user.component';
-import { CreateRoleComponent } from './pages/create-role/create-role.component';
+import { UserDetailComponent } from './pages/user/user-detail/user-detail.component';
+import { EditUserComponent } from './pages/user/edit-user/edit-user.component';
+import { CreateUserComponent } from './pages/user/create-user/create-user.component';
+import { CreateRoleComponent } from './pages/role/create-role/create-role.component';
+import { RoleManagementComponent } from './pages/role/role-management/role-management.component';
+import { EditRoleComponent } from './pages/role/edit-role/edit-role.component';
 
 const routes: Routes = [
   {
@@ -54,8 +56,16 @@ const routes: Routes = [
         component: CreateUserComponent,
       },
       {
+        path: 'role-management',
+        component: RoleManagementComponent,
+      },
+      {
         path: 'create-role',
         component: CreateRoleComponent,
+      },
+      {
+        path: 'edit-role/:id',
+        component: EditRoleComponent,
       },
       // {
       //   path: '**',

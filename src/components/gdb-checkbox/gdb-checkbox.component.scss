@@ -21,14 +21,14 @@
   width: 20px;
   background-color: white;
   border-radius: 4px;
-  border: 1px solid #860063;
+  border: 1px solid #4067fe;
   box-shadow: 0px 3px 6px #00000029;
 }
 
 .check-container input:checked ~ .mark {
   border-radius: 4px;
-  background-color: #860063;
-  border: 1px solid #860063;
+  background-color: #4067fe;
+  border: 1px solid #4067fe;
 }
 
 /* Create the mark/indicator (hidden when not checked) */

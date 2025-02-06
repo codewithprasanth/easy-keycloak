@@ -10,13 +10,13 @@
 }
 
 .action-btn.primary {
-  background: #860063;
+  background: #4067fe;
   color: white;
 }
 
 .action-btn.secondary {
-  border: 1px solid #860063;
-  color: #860063;
+  border: 1px solid #4067fe;
+  color: #4067fe;
   background: white;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .action-btn.refresh {
-  background: #860063;
+  background: #4067fe;
   color: white;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .action-btn:disabled {
-  background: #c6c6c5 !important;
-  color: white !important;
+  background: #454545 !important;
+  color: #686565 !important;
   cursor: not-allowed !important;
 }

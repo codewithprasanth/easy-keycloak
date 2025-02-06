@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <div class="gdb-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="page-header">Edit User</div>
+    </div>
+    <form [formGroup]="userForm">
+      <div class="form-input">
+        <label>Username *</label>
+        <text-input id="username" formControlName="username" />
+      </div>
+      <div class="form-input">
+        <label>First Name</label>
+        <text-input id="firstName" formControlName="firstName" />
+      </div>
+      <div class="form-input">
+        <label>Last Name</label>
+        <text-input id="lastName" formControlName="lastName" />
+      </div>
+      <div class="form-input">
+        <label>Email</label>
+        <text-input id="email" formControlName="email" />
+      </div>
+      <div class="form-input">
+        <Label>Enable</Label>
+        <gdb-toggle formControlName="enable"></gdb-toggle>
+      </div>
+      <div class="form-input">
+        <Label>Email Verified</Label>
+        <gdb-toggle formControlName="emailVerified"></gdb-toggle>
+      </div>
+      <div class="form-input">
+        <Label>Roles</Label>
+        <ng-multiselect-dropdown
+          placeholder="Select Roles"
+          [settings]="roleSettings"
+          [data]="rolesList"
+          formControlName="role"
+        />
+      </div>
+      <div
+        *ngIf="!setPassword"
+        class="form-input link-type"
+        (click)="setPassword = true"
+      >
+        Set Password
+      </div>
+      @if (setPassword) {
+      <div class="form-input">
+        <label>Password</label>
+        <text-input id="password" formControlName="password" />
+      </div>
+      <div class="form-input">
+        <Label>Temporary Password</Label>
+        <gdb-toggle formControlName="temporaryPw"></gdb-toggle>
+      </div>
+      }
+      <div class="form-input">
+        <div class="d-flex" style="gap: 12px">
+          <gdb-btn
+            [isDisabled]="userForm.invalid"
+            text="Update"
+            (click)="onSubmit()"
+          ></gdb-btn>
+          <gdb-btn
+            type="secondary"
+            (click)="userForm.reset()"
+            text="Reset"
+          ></gdb-btn>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

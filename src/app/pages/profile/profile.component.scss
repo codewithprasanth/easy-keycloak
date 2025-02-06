@@ -1,0 +1,42 @@
+.wrapper {
+  width: 100%;
+  .gdb-card {
+    width: 90%;
+    margin: auto;
+    .key-value {
+      width: 100%;
+      background: #3b3a3a;
+      padding: 12px;
+      border-bottom: 1px solid #746b6b;
+      .key {
+        font-size: 16px;
+        font-weight: 600;
+        color: #949494;
+      }
+      .value {
+        font-size: 16px;
+        color: #e2e1e1;
+      }
+      .chip-holder {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 9px;
+        .chip {
+          padding: 8px;
+          border: 1px solid grey;
+          border-radius: 8px;
+          margin-bottom: 8px;
+          background: #444444;
+          width: 320px;
+          .chip-key {
+            font-weight: 600;
+            color: #fff;
+          }
+          .chip-value {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

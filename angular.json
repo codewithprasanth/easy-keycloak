@@ -29,7 +29,7 @@
             "assets": ["src/favicon.png", "src/assets"],
             "styles": [
               "src/styles.scss",
-              "./node_modules/ngx-spinner/animations/ball-clip-rotate.css",
+              "./node_modules/ngx-spinner/animations/ball-atom.css",
               "./node_modules/bootstrap/scss/bootstrap.scss"
             ],
             "scripts": []

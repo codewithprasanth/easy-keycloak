@@ -17,6 +17,7 @@ export class TextInputComponent implements ControlValueAccessor {
   @Input() placeholder = '';
   disabled = false;
   value: string = '';
+
   writeValue(val: string): void {
     this.value = val;
   }

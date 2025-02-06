@@ -38,5 +38,7 @@ export class ToggleComponent implements ControlValueAccessor {
 
   onCheckboxChange(event: Event) {
     this.onChange.emit(event);
+    console.log(event);
+    // this.change(event)
   }
 }

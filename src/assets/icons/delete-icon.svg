@@ -1,7 +1,7 @@
 <svg id="Group_29019" data-name="Group 29019" xmlns="http://www.w3.org/2000/svg" width="12.237" height="15.734" viewBox="0 0 12.237 15.734">
   <g id="rubbish-bin-delete-button">
     <g id="delete">
-      <path id="Path_1697" data-name="Path 1697" d="M51.874,13.986a1.753,1.753,0,0,0,1.748,1.748h6.993a1.753,1.753,0,0,0,1.748-1.748V3.5H51.874ZM63.237.874H60.178L59.3,0H54.933l-.874.874H51V2.622H63.237Z" transform="translate(-51)" fill="#4a4949"/>
+      <path id="Path_1697" data-name="Path 1697" d="M51.874,13.986a1.753,1.753,0,0,0,1.748,1.748h6.993a1.753,1.753,0,0,0,1.748-1.748V3.5H51.874ZM63.237.874H60.178L59.3,0H54.933l-.874.874H51V2.622H63.237Z" transform="translate(-51)" fill="#fff"/>
     </g>
   </g>
 </svg>

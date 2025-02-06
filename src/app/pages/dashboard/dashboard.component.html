@@ -1,9 +1,19 @@
 <div class="wrapper">
   <header>
-    Easy Keycloak
+    <div>
+      <img height="30px" src="assets\icons\keycloak.svg" />
+      Easy Keycloak
+    </div>
     <div class="user-action">
       <div>{{ displayName }}</div>
-      <span (click)="logout()">Logout</span>
+      <img
+        (click)="logout()"
+        height="18px"
+        src="assets\icons\logout.svg"
+        ngbTooltip="Logout"
+        placement="bottom"
+        container="body"
+      />
     </div>
   </header>
   <section>
@@ -12,6 +22,9 @@
       <a routerLink="/app/token" routerLinkActive="active">Generate Token</a>
       <a routerLink="/app/user-management" routerLinkActive="active"
         >User Management</a
+      >
+      <a routerLink="/app/role-management" routerLinkActive="active"
+        >Role Management</a
       >
     </nav>
     <main>

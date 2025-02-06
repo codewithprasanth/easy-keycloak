@@ -43,18 +43,21 @@ import { NumberInputDirective } from 'src/components/number-input/number-input.d
 import { NumberInputComponent } from 'src/components/number-input/number-input.component';
 import { AgFlagOverrideRendererComponent } from 'src/components/ag-grid/ag-flag-override-renderer/ag-flag-override-renderer.component';
 import { TextInputComponent } from 'src/components/text-input/text-input.component';
-import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { UserManagementComponent } from './pages/user/user-management/user-management.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TokenGenComponent } from './pages/token-gen/token-gen.component';
-import { AuthComponent } from './pages/auth/auth.component';
+import { AuthComponent } from './pages/authentication/auth/auth.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ConfigurationComponent } from './page-chunks/configuration/configuration.component';
-import { LoginComponent } from './page-chunks/login/login.component';
-import { StartComponent } from './page-chunks/start/start.component';
-import { UserDetailComponent } from './pages/user-detail/user-detail.component';
-import { CreateUserComponent } from './pages/create-user/create-user.component';
-import { EditUserComponent } from './pages/edit-user/edit-user.component';
-import { CreateRoleComponent } from './pages/create-role/create-role.component';
+import { ConfigurationComponent } from './pages/authentication/configuration/configuration.component';
+import { LoginComponent } from './pages/authentication/login/login.component';
+import { StartComponent } from './pages/authentication/start/start.component';
+import { UserDetailComponent } from './pages/user/user-detail/user-detail.component';
+import { CreateUserComponent } from './pages/user/create-user/create-user.component';
+import { EditUserComponent } from './pages/user/edit-user/edit-user.component';
+import { CreateRoleComponent } from './pages/role/create-role/create-role.component';
+import { RoleManagementComponent } from './pages/role/role-management/role-management.component';
+import { IconRendererComponent } from 'src/components/ag-grid/icon-renderer/icon-renderer.component';
+import { EditRoleComponent } from './pages/role/edit-role/edit-role.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +96,9 @@ import { CreateRoleComponent } from './pages/create-role/create-role.component';
     CreateUserComponent,
     EditUserComponent,
     CreateRoleComponent,
+    RoleManagementComponent,
+    IconRendererComponent,
+    EditRoleComponent,
   ],
   imports: [
     BrowserModule,

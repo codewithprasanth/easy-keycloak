@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/auth/auth-service';
 
 @Component({
@@ -9,8 +10,20 @@ import { AuthService } from 'src/app/auth/auth-service';
 export class TokenGenComponent implements OnInit {
   token: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private toastr: ToastrService
+  ) {}
   ngOnInit(): void {
     this.token = this.authService.kcAdminClient.accessToken as string;
+  }
+
+  regenerateToken() {
+    this.token = this.authService.kcAdminClient.accessToken as string;
+  }
+
+  copyToClipboard() {
+    navigator.clipboard.writeText(this.token);
+    this.toastr.success('Token copied to clipboard!');
   }
 }

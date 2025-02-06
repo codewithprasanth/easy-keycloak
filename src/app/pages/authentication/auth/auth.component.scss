@@ -1,0 +1,32 @@
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #4067fe;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .configuration,
+  .login {
+    width: 35%;
+  }
+  padding: 30px;
+  padding-bottom: 30px;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.description {
+  text-align: center;
+  font-size: 18px;
+}

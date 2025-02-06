@@ -1,0 +1,11 @@
+.wrapper {
+  width: 100%;
+  .gdb-card {
+    width: 50%;
+    margin: auto;
+    overflow-wrap: break-word;
+    .token {
+      margin-top: 16px;
+    }
+  }
+}

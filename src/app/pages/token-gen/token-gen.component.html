@@ -1,3 +1,18 @@
-<button>Regenerate</button>
-
-{{ token }}
+<div class="wrapper">
+  <div class="gdb-card">
+    <div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="page-header">Access Token</div>
+        <div class="d-flex" style="gap: 16px">
+          <gdb-btn
+            text="Copy to clipboard"
+            (click)="copyToClipboard()"
+            type="secondary"
+          />
+          <gdb-btn text="Regenerate" (click)="regenerateToken()" />
+        </div>
+      </div>
+      <div class="token">{{ token }}</div>
+    </div>
+  </div>
+</div>

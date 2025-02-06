@@ -1,0 +1,33 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+  <div class="form-input">
+    <label for="clientId">Client ID *</label>
+    <text-input id="clientId" formControlName="clientId" />
+  </div>
+  <div class="form-input">
+    <label for="userName">Username *</label>
+    <text-input id="userName" formControlName="userName" />
+  </div>
+  <div class="form-input">
+    <label for="password">Password *</label>
+    <text-input id="password" formControlName="password" />
+  </div>
+  <div class="form-input">
+    <label for="grantType">Grant Type *</label>
+    <ng-select
+      [items]="grantTypeList"
+      bindLabel="name"
+      bindValue="value"
+      name="grantType"
+      [searchable]="false"
+      formControlName="grantType"
+    >
+    </ng-select>
+  </div>
+  <div class="form-input">
+    <label for="clientSecret">Client Secret</label>
+    <text-input id="clientSecret" formControlName="clientSecret" />
+  </div>
+  <div class="form-input">
+    <gdb-btn [isDisabled]="!loginForm.valid" text="Login"></gdb-btn>
+  </div>
+</form>

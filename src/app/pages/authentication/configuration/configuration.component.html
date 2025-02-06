@@ -1,0 +1,31 @@
+<form [formGroup]="configurationForm" (ngSubmit)="submitConfiguration()">
+  @if(configurationSubmitted){
+  <div class="edit-icon">
+    <img
+      (click)="editConfiguration()"
+      src="assets\icons\pencil.svg"
+      height="18px"
+      ngbTooltip="Edit Configuration"
+      placement="top"
+      container="body"
+    />
+  </div>
+  }
+  <div class="form-input">
+    <label for="baseUrl">Base Url *(https://example.com/auth)</label>
+    <text-input id="baseUrl" formControlName="baseUrl" />
+  </div>
+  <div class="form-input">
+    <label for="realm">Realm *</label>
+    <text-input id="realm" formControlName="realm" />
+  </div>
+  @if(!configurationSubmitted){
+  <div class="form-input">
+    <gdb-btn
+      [isDisabled]="!configurationForm.valid"
+      text="Connect"
+      type="primary"
+    ></gdb-btn>
+  </div>
+  }
+</form>

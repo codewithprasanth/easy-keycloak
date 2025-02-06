@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="title">
+    <img height="42px" src="assets\icons\keycloak.svg" /> Easy Keycloak
+  </div>
+  <div class="description">Ready to transform the way you manage Keycloak?</div>
+  <div class="description">
+    Dive into seamless efficiency with our GUI tool today! 🚀
+  </div>
+  <div class="auth">
+    <div class="configuration gdb-card">
+      <h2 class="heading">Configuration</h2>
+      <configuration
+        (submitConfig)="submitConfig($event)"
+        (editConfig)="editConfig()"
+      />
+    </div>
+    @if(showLogin){
+    <div class="login gdb-card">
+      <h2 class="heading">Login</h2>
+      <login (onLogin)="login($event)" />
+    </div>
+    }
+  </div>
+</div>

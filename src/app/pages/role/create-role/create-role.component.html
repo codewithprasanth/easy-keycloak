@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="gdb-card">
+    <form [formGroup]="roleForm">
+      <div class="form-input">
+        <label>Role Name *</label>
+        <text-input id="roleName" formControlName="roleName" />
+      </div>
+      <div class="form-input">
+        <label>Role Description</label>
+        <text-input id="description" formControlName="description" />
+      </div>
+      <div class="form-input">
+        <div class="d-flex" style="gap: 12px">
+          <gdb-btn
+            [isDisabled]="roleForm.invalid"
+            text="Create"
+            (click)="onSubmit()"
+          ></gdb-btn>
+          <gdb-btn
+            type="secondary"
+            (click)="roleForm.reset()"
+            text="Reset"
+          ></gdb-btn>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -54,6 +54,7 @@ import { StartComponent } from './page-chunks/start/start.component';
 import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
+import { CreateRoleComponent } from './pages/create-role/create-role.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { EditUserComponent } from './pages/edit-user/edit-user.component';
     UserDetailComponent,
     CreateUserComponent,
     EditUserComponent,
+    CreateRoleComponent,
   ],
   imports: [
     BrowserModule,

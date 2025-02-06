@@ -8,6 +8,10 @@ import { AuthService } from 'src/app/auth/auth-service';
 import * as moment from 'moment';
 import { AgActionButtonsRendererComponent } from 'src/components/ag-grid/ag-action-buttons-renderer/ag-action-buttons-renderer.component';
 import { ComplianceRendererComponent } from 'src/components/ag-grid/compliance-renderer/compliance-renderer.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { ListFilterPipe } from 'ng-multiselect-dropdown/list-filter.pipe';
 
 @Component({
   selector: 'user-management',
@@ -17,7 +21,11 @@ import { ComplianceRendererComponent } from 'src/components/ag-grid/compliance-r
 export class UserManagementComponent implements OnInit {
   constructor(
     private confirmationService: ConfirmationService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService
   ) {}
 
   geodb = {
@@ -96,10 +104,9 @@ export class UserManagementComponent implements OnInit {
         cellRendererParams: {
           field1: 'id',
           clicked: (id: string) => {
-            // this.router.navigate(['./../view-user', userId], {
-            //   relativeTo: this.activatedRoute,
-            // });
-            alert(id);
+            this.router.navigate(['./../user-detail', id], {
+              relativeTo: this.activatedRoute,
+            });
           },
         },
       },
@@ -112,11 +119,26 @@ export class UserManagementComponent implements OnInit {
 
   async ngOnInit() {
     try {
+      this.spinner.show();
       const rowData = await this.authService.kcAdminClient.users.find();
       console.log(rowData);
       this.gridApi.setRowData(rowData);
+      this.spinner.hide();
     } catch (e) {
       console.log(e);
+      this.toastr.error('Failed to fetch user ListFilterPipe.');
     }
+  }
+
+  onCreateNewUser() {
+    this.router.navigate(['./../create-user'], {
+      relativeTo: this.activatedRoute,
+    });
+  }
+
+  onCreateNewRole() {
+    this.router.navigate(['./../create-role'], {
+      relativeTo: this.activatedRoute,
+    });
   }
 }

@@ -10,6 +10,7 @@ import { authGuard } from './auth/auth-guard.service';
 import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
+import { CreateRoleComponent } from './pages/create-role/create-role.component';
 
 const routes: Routes = [
   {
@@ -53,19 +54,23 @@ const routes: Routes = [
         component: CreateUserComponent,
       },
       {
-        path: '**',
-        redirectTo: 'profile',
+        path: 'create-role',
+        component: CreateRoleComponent,
       },
+      // {
+      //   path: '**',
+      //   redirectTo: 'profile',
+      // },
     ],
   },
   {
     path: 'auth',
     component: AuthComponent,
   },
-  {
-    path: '**',
-    redirectTo: 'app',
-  },
+  // {
+  //   path: '**',
+  //   redirectTo: 'app',
+  // },
 ];
 
 @NgModule({

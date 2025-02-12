@@ -28,9 +28,9 @@ export class LoginComponent {
   ];
 
   loginForm = new FormGroup({
-    clientId: new FormControl('ofi-portal', Validators.required),
-    userName: new FormControl('super_admin', Validators.required),
-    password: new FormControl('Geodb@123', Validators.required),
+    clientId: new FormControl('', Validators.required),
+    userName: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
     grantType: new FormControl('password', Validators.required),
     clientSecret: new FormControl(''),
   });

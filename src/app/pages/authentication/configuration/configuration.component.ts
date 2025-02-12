@@ -19,11 +19,8 @@ export class ConfigurationComponent {
   configurationSubmitted = false;
 
   configurationForm = new FormGroup({
-    baseUrl: new FormControl(
-      'https://digitalauthdev.olamnet.com/auth',
-      Validators.required
-    ),
-    realm: new FormControl('geodb-dev', Validators.required),
+    baseUrl: new FormControl('', Validators.required),
+    realm: new FormControl('', Validators.required),
   });
 
   submitConfiguration() {
